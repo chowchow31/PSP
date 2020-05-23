@@ -1,0 +1,288 @@
+$primaryColor: #02d5ff; //rgb(2,255,255)
+$backgroundColor: #00142e;  //rgb(19,39,108)
+
+$red:#d02f17;
+$darkCerulean:#08457E;  //heading warp
+$navyBlue:#063263; // table background
+$darkOrange:#996620; // table heading
+$green:#02ffea;
+
+/**************** color use ****************/
+/*
+$primaryColor: #02d5ff; //rgb(2,255,255)
+$backgroundColor: #00142e;  //rgb(19,39,108)
+
+$darkCerulean:#08457E;  //heading warp
+$navyBlue:#063263; // table background
+$darkOrange:#996620; // table heading
+*/
+
+/**************** chart color ****************/
+/*
+$red:#d02f17;
+$pink:#e03f82;
+$orange:#fa672f;
+$yellow:#f9bb48;
+$cyan:#00ccd9;
+$green:#afde48;
+$blue:#1c6ee6;
+$purple:#c164f7;
+$gray:#bebebe; 
+*/
+/**************** font ****************/
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url("/fonts/NotoSansTC-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url("/fonts/NotoSansTC-Regular.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("/fonts/TitilliumWeb-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("/fonts/TitilliumWeb-SemiBold.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/**************** general class ****************/
+html, body {
+  padding: 0;
+  margin:0;
+  height:100%;
+  overflow-x:hidden;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size:1rem;
+}
+
+body{
+  color: $primaryColor;
+  background-color:$backgroundColor;
+  background-image: url('/images/bg.jpg');//radial-gradient(at top,#002b42, #00142e); 
+  background-position: top; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+
+/**************** heading ****************/
+.heading {
+  letter-spacing: 3px;
+  color: white;
+  font-weight: bolder;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 2.3rem;
+}
+
+/* heading warp */
+/*.heading-warp {
+  padding:0 30px;
+  border:0;
+  border-radius: 50px 100px; 
+  -moz-border-radius: 50px 100px;
+  -webkit-border-radius: 50px 100px;
+  background: linear-gradient(to bottom, rgba($darkCerulean, 0.3), rgba(black, 0.2)) ;
+  box-shadow: 0px 0px 30px $darkCerulean ;
+}*/
+
+/* heading background */
+.heading-bg {
+  text-align: center;
+  display: inline-block;
+  padding: 5px;
+  margin:0;
+  /*background: linear-gradient(to bottom, rgba($primaryColor, 0.3), rgba($primaryColor, 0)) ;
+  border-radius: 50px 100px; 
+  -moz-border-radius: 50px 100px;
+  -webkit-border-radius: 50px 100px;
+  box-shadow: 0px 0px 10px $primaryColor inset;*/
+}
+
+/**************** overlay ****************/
+/* page background overlay*/
+.overlay-bg {
+  background-color: rgba(#00142e, 0.8);
+  height:100vh!important;
+  //animation: colorCycle 6s ease infinite;
+}
+
+.overlay-bg1 {
+  background-color: rgba(#00142e, 0.8);
+  //animation: colorCycle 6s ease infinite;
+}
+
+/* The animation code */
+/*@keyframes colorCycle {
+  0%   {background-color: rgba($backgroundColor, 0.8);}
+  50%  {background-color: rgba($backgroundColor, 0.6);}
+  100% {background-color: rgba($backgroundColor, 0.8);}
+}*/
+
+
+/* panel transparent overlay */
+.overlay-panel{
+  background: linear-gradient(to bottom, rgba($primaryColor, 0.2), rgba(black,0.2)) ;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  border: 2px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px $primaryColor inset;
+}
+
+/* chart background overlay */
+.overlay-chart{
+  background: linear-gradient(to bottom, rgba($primaryColor, 0.2), rgba(black,0.6)) ;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  border: 2px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px $primaryColor inset;
+}
+
+/* need to set width & height or can't show */
+.bar-chart {
+  width: calc( (100vw - 5rem) / 2) ;
+  height: 52vh;
+  /*width: 48vw;*/
+}
+
+/* set width & height */
+.pie-chart {
+  width: calc( (100vw - 6rem) / 4);
+  height: 52vh;
+  /*width: 23vw;*/
+}
+
+/* people cards text background */
+.overlay-card {
+  background:linear-gradient(to bottom, rgba($primaryColor, 0.2), rgba(black,0.2)) ;
+  box-shadow: 0px 0px 10px $primaryColor inset;
+}
+
+/**************** text ****************/
+/* text white */
+.text-white{
+  color:white;
+}
+
+/* text number */
+.text-number {
+  font-family: 'Titillium Web', sans-serif;
+  font-size:2.4rem;
+  line-height: 1.2;
+  text-shadow: 0px 0px 3px $primaryColor;
+}
+
+/* text number unit */
+.text-number-unit {
+  font-size:1.0rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-shadow: 0px 0px 2px $primaryColor;
+  font-style: italic;
+}
+
+/**************** table ****************/
+/* table */
+table {
+  background-color:  rgba($navyBlue, 0.8);
+  text-align: center;
+  box-shadow: 0px 0px 10px $primaryColor inset;
+  border-radius: 5px;
+  margin:0 3px;
+}
+
+/* table header background */
+table > thead > tr, table > tbody > tr > th {
+  //background-color: rgba($darkOrange,0.8) ;
+  background-color: darken(rgba($primaryColor,0.6), 20%) ;
+  box-shadow: 0px 0px 10px  rgba(white,0.2) ;
+  border: 2px solid rgba(white, 0.2);
+}
+
+/* table green header background */
+table.green > thead > tr, table.green > tbody > tr > th {
+  background-color: darken(rgba($green,0.6), 20%) ;
+}
+
+/* table header color */
+table > th, tr {
+  color: white;
+  box-shadow: 0px 0px 5px rgba(gray,0.4) inset;
+}
+
+/* table heading */
+.table-heading {
+  display: inline-block;
+  padding:2px 100px;
+  margin:0 0 8px 0 ;
+  letter-spacing: 3px;
+  font-size:1.2rem;
+  font-weight: bold;
+  color:white;
+  border-radius: 30px 10px 50px 10px;
+  border: 1px solid rgba(white, 0.2);
+  //background: linear-gradient(to bottom, rgba($primaryColor, 0.3), rgba(black, 0.2)) ;
+  //box-shadow: 0px 0px 10px $primaryColor ;
+  background-color: darken(rgba($primaryColor,0.8), 20%) ;
+  box-shadow: 0px 0px 10px  rgba(white, 0.2) ;
+}
+
+.table-heading-green {
+  display: inline-block;
+  padding:2px 100px;
+  margin:0 0 8px 0 ;
+  letter-spacing: 3px;
+  font-size:1.2rem;
+  font-weight: bold;
+  color:white;
+  border-radius: 30px 10px 50px 10px;
+  border: 1px solid rgba(white, 0.2);
+  //background: linear-gradient(to bottom, rgba($green, 0.3), rgba(black, 0.2)) ;
+  //box-shadow: 0px 0px 10px $green ;
+  background-color: darken(rgba($green,0.8), 20%) ;
+  box-shadow: 0px 0px 10px  rgba(white, 0.2) ;
+}
+
+/* table td color */
+table > tbody > tr > td {
+  color: $primaryColor;
+}
+/* table striped color */
+table.table-striped>tbody>tr:nth-child(odd)>td {
+   background-color: rgba(black, 0.2);
+}
+/* table hover tr color */
+table > tbody > tr:hover , table > tbody > tr:hover > th {
+  box-shadow: 0px 2px 20px rgba(white,0.6);
+  border:2px solid rgba(white, 0.2);
+}
+/* tr highlight text color */
+td.highlight {
+  color:white;
+  background-color:rgba($red, 0.8)!important;
+  box-shadow: 0px 0px 5px rgba(white, 0.3);
+  font-weight:bolder;
+}
+
+
+/**************** vh height ****************/
+//.vh-#{$i}
+@for $i from 1 through 50 {
+  $i: $i * 2;
+  .vh-#{$i} {
+    height: #{$i}vh !important;
+  }
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PSP</title>
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600&amp;display=swap" rel="stylesheet">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+  <div class="container-fluid p-3 overlay-bg1">
+
+      <!-- top heading -->
+      <div class="row m-3 justify-content-center align-self-center">
+        <div class="heading-warp">
+          <div class="heading-bg">
+            <h2 class="heading mb-0">LINE 1 设备时效看板</h2>
+          </div>
+        </div>
+      </div>
+    
+      <!-- row 1 -->
+      <div class="row m-3">
+
+          <!-- left panel -->
+          <div class="col-md-9">
+            <div class="row h-100">
+              <div class="col-md-12 overlay-panel p-3">
+                <div class="row">    
+                  <div class="col-md-4">
+                    <div class="text-center">
+                      <h5 class="text-white">当前工单</h5>
+                      <text class="text-number">8111776706</text>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="text-center">
+                      <h5 class="text-white">当前程序</h5>
+                      <text class="text-number">F3128-1016-4T</text>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="text-center">
+                      <h5 class="text-white">节拍时间</h5>
+                      <text class="text-number">15</text>
+                      <text class="text-number-unit"> 秒</text>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="text-center mt-3">
+                      <h5 class="text-white">生产进度</h5>
+                      <text class="text-number">2000 /16000</text>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="text-center">
+                      <h5 class="text-white mt-3">已生产时间</h5>
+                      <text class="text-number">8</text>
+                      <text class="text-number-unit"> 小时</text>
+                      <text class="text-number">15</text>
+                      <text class="text-number-unit"> 分钟</text>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="text-center"> 
+                      <h5 class="text-white mt-3">剩余时间</h5>
+                      <text class="text-number">1</text>
+                      <text class="text-number-unit"> 小时</text>
+                      <text class="text-number">20</text>
+                      <text class="text-number-unit"> 分钟</text>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- right staff panel -->
+          <div class="col-md-3">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card overlay-card h-100">
+                  <img src="/images/user.jpg" class="card-img-top" alt="user" style="height:160px">
+                  <div class="card-body py-2 text-center text-white">
+                    <h6>领班</h6>
+                    <h5 class="mb-1">张某某</h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="card overlay-card h-100">
+                  <img src="/images/user.jpg" class="card-img-top" alt="user" style="height:160px">
+                  <div class="card-body py-2 text-center text-white">
+                    <h6>技术员</h6>
+                    <h5 class="mb-1">陈某某</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    
+      <!-- row 2-->
+      <div class="row m-3">
+        <div class="col-md-12">
+          <div class="table-heading">MSD 过期信息</div>
+          <table class="table table-sm table-striped table-borderless m-0">
+            <thead>
+              <tr><th>序号</th><th>机台</th><th>工作台</th><th>料站</th><th>料号</th><th>ReelID</th><th>状态</th><th>过期时间</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th>1</th><td>2</td><td>1</td><td>3L</td><td>01.000.0G501</td><td>500000100000001</td><td>使用中</td><td>2019/5/19  08:45:32 AM</td></tr>
+              <tr><th>2</th><td>2</td><td>2</td><td>4L</td><td>01.000.0G502</td><td>500000100000001</td><td>使用中</td><td>2019/5/20  08:45:32 AM</td></tr>
+              <tr><th>3</th><td>2</td><td>2</td><td>5L</td><td>01.000.0G503</td><td>500000100000001</td><td>使用中</td><td>2019/5/21  08:45:32 AM</td></tr>
+              <tr><th>4</th><td>2</td><td>2</td><td>6L</td><td>01.000.0G504</td><td>500000100000001</td><td>使用中</td><td>2019/5/22  08:45:32 AM</td></tr>
+              <tr><th>5</th><td>2</td><td>2</td><td>7L</td><td>01.000.0G505</td><td>500000100000001</td><td>使用中</td><td>2019/5/23  08:45:32 AM</td></tr>
+              <tr><th>6</th><td>2</td><td>2</td><td>8L</td><td>01.000.0G506</td><td>500000100000001</td><td>使用中</td><td>2019/5/24  08:45:32 AM</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    
+      <!-- row 3-->
+      <div class="row m-3">
+        <div class="col-md-6">
+          <div class="table-heading-green">治具预警信息</div>
+          <table class="table green table-sm table-striped table-borderless m-0">
+            <thead>
+              <tr><th>序号</th><th>类型</th><th>机台</th><th>工作台</th><th>料站</th><th>条码</th><th>使用次数</th><th>状态</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th>1</th><td>Feeder</td><td>1</td><td>1</td><td>12L</td><td>PACM0800001L</td><td>950,000</td><td>使用中</td></tr>
+              <tr><th>2</th><td>钢网</td><td>2</td><td>1</td><td>4L</td><td>PACM0800002L</td><td>2,000</td><td>使用中</td></tr>
+              <tr><th>3</th><td>前刮刀</td><td>3</td><td>1</td><td>5L</td><td>PACM0800003L</td><td>2,000</td><td>使用中</td></tr>
+              <tr><th>4</th><td>后刮刀</td><td>4</td><td>1</td><td>6L</td><td>PACM0800004L</td><td>2,000</td><td>使用中</td></tr>
+              <tr><th>5</th><td>载具</td><td>5</td><td>1</td><td>7L</td><td>PACM0800005L</td><td>2,000</td><td>使用中</td></tr>
+              <tr><th>6</th><td>压盖</td><td>6</td><td>1</td><td>8L</td><td>PACM0800006L</td><td>2,000</td><td>使用中</td></tr>
+              <tr><th>7</th><td>钢片</td><td>7</td><td>1</td><td>8L</td><td>PACM0800007L</td><td>2,000</td><td>使用中</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <div class="table-heading-green">锡膏/红胶/钢网过期信息</div>
+          <table class="table green table-sm table-striped table-borderless m-0">
+            <thead>
+              <tr><th>序号</th><th>类型</th><th>ReelID</th><th>开封时间</th><th>过期时间</th></tr>
+            </thead>
+            <tbody>
+              <tr><th>1</th><td>锡膏</td><td>500000100000001</td><td>2019/5/19  08:45:32 AM</td><td>2019/5/19  08:45:32 AM</td></tr>
+              <tr><th>2</th><td>红胶</td><td>500000100000001</td><td>2019/5/19  08:45:32 AM</td><td>2019/5/19  08:45:32 AM</td></tr>
+              <tr><th>3</th><th>类型</th><th>钢网条码</th><th>上线时间</th><th>过期时间</th></tr>
+              <tr><th>4</th><td>钢网</td><td>500000100000001</td><td>2019/5/19  08:45:32 AM</td><td>2019/5/19  08:45:32 AM</td></tr>
+              <tr><th>5</th><td></td><td></td><td></td><td></td></tr>
+              <tr><th>6</th><td></td><td></td><td></td><td></td></tr>
+              <tr><th>7</th><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+  </div>
+
+  <!-- bootstrap 4 js -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body></html>

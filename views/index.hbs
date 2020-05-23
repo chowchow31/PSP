@@ -1,0 +1,129 @@
+<div class="container-fluid p-3 h-100 overlay-bg">
+
+  <!-- top heading -->
+  <div class="row m-3 justify-content-center align-self-center" >
+    <div class="heading-warp">
+      <div class="heading-bg">
+        <h2 class="heading mb-0">LINE 1 綜合生产看板</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- row 1 -->
+  <div class="row m-3">
+
+    <!-- left panel -->
+    <div class="col-md-9">
+      <div class="row h-100">
+        <div class="col-md-12 overlay-panel p-2">
+          <div class="row">    
+            <div class="col-md-4">
+              <div class="text-center">
+                <h5 class="text-white">当前工单</h5>
+                <text class="text-number">8111776706</text>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="text-center">
+                <h5 class="text-white">当前程序</h5>
+                <text class="text-number">F3128-1016-4T</text>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="text-center">
+                <h5 class="text-white">节拍时间</h5>
+                <text class="text-number">15</text>
+                <text class="text-number-unit"> 秒</text>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="text-center mt-3">
+                <h5 class="text-white">生产进度</h5>
+                <text class="text-number">2000 /16000</text>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="text-center">
+                <h5 class="text-white mt-3">已生产时间</h5>
+                <text class="text-number">8</text>
+                <text class="text-number-unit"> 小时</text>
+                <text class="text-number">15</text>
+                <text class="text-number-unit"> 分钟</text>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="text-center"> 
+                <h5 class="text-white mt-3">剩余时间</h5>
+                <text class="text-number">1</text>
+                <text class="text-number-unit"> 小时</text>
+                <text class="text-number">20</text>
+                <text class="text-number-unit"> 分钟</text>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- right staff panel -->
+    <div class="col-md-3">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card overlay-card h-100">
+            <img src="/images/user.jpg" class="card-img-top" alt="user" style="height:160px" >
+            <div class="card-body py-2 text-center text-white">
+              <h6>领班</h6>
+              <h5 class="mb-1">张某某</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card overlay-card h-100">
+            <img src="/images/user.jpg" class="card-img-top" alt="user" style="height:160px" >
+            <div class="card-body py-2 text-center text-white">
+              <h6>技术员</h6>
+              <h5 class="mb-1">陈某某</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- row 2 charts-->
+  <div class="row m-3">
+    <!-- WIP -->
+    <div class="col-md-12 p-0 vh-54">
+      <!-- top table-->
+      <table class="table table-sm table-striped table-borderless m-0 w-100 vh-10">
+        <thead>
+          <tr><th>投入站</th><th>SPI</th></th><th>贴片机</th><th>炉前AOI</th><th>炉后AOI</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>100</td><td>98</td><td>95</td><td>90</td><td>80</td></tr>
+        </tbody>
+      </table>
+      <!-- bottom table-->
+      <table class="table table-sm table-striped table-borderless m-0 w-100 vh-44">
+        <thead>
+          <tr><th>时段</th><th>标准产出(PCS)</th></th><th>实际产出(PCS)</th><th>达成率(%)</th><th>稼动率(%)</th><th>抛料率(PPM)</th><th>SPI良率(%)</th><th>炉前AOI良率(%)</th><th>炉后AOI良率(%)</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>08:00</th><td>200</td><td>200</td><td>100</td><td>90</td><td>500</td><td>99</td><td>99</td><td>99</td></tr>
+          <tr><th>09:00</th><td>200</td><td>200</td><td class="highlight">98</td><td>90</td><td>500</td><td>99</td><td>99</td><td>99</td></tr>
+          <tr><th>10:00</th><td>200</td><td>200</td><td class="highlight">99</td><td>90</td><td>500</td><td>99</td><td>99</td><td>99</td></tr>
+          <tr><th>11:00</th><td>200</td><td>200</td><td class="highlight">90</td><td>90</td><td>500</td><td>99</td><td>99</td><td>99</td></tr>
+          <tr><th>12:00</th><td>200</td><td>200</td><td class="highlight">92</td><td>90</td><td>500</td><td>99</td><td>99</td><td>99</td></tr>
+          <tr><th>13:00</th><td>200</td><td>200</td><td class="highlight">95</td><td>90</td><td>500</td><td>99</td><td>99</td><td>99</td></tr>
+          <tr><th>14:00</th><td>200</td><td>200</td><td class="highlight">90</td><td>90</td><td>500</td><td>99</td><td>99</td><td>99</td></tr>
+          <tr><th>15:00</th><td>200</td><td>200</td><td class="highlight">90</td><td>90</td><td>500</td><td>99</td><td>99</td><td>99</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+
+

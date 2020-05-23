@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>PSP</title>
+  <!-- bootstrap 4 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- google font -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:400,700" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600&amp;display=swap" rel="stylesheet"> -->
+  <!-- Custom css -->
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <!-- carousel -->
+    <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="100000" data-pause="false">
+      <div class="carousel-inner">
+
+        <!-- page 1 content -->
+        <div class="carousel-item active">
+          <div class="container-fluid p-3 h-100 overlay-bg">
+
+            <!-- top heading -->
+            <div class="row m-3 justify-content-center align-self-center">
+              <div class="heading-warp">
+                <div class="heading-bg">
+                  <h2 class="heading mb-0">LINE 1 綜合生产看板</h2>
+                </div>
+              </div>
+            </div>
+
+            <!-- row 1 -->
+            <div class="row m-3">
+
+              <!-- left panel -->
+              <div class="col-md-9">
+                <div class="row ">
+                  <div class="col-md-12 overlay-panel p-3">
+                    <div class="row">    
+                      <div class="col-md-4">
+                        <div class="text-center">
+                          <h5 class="text-white">当前工单</h5>
+                          <label class="text-number">8111776706</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center">
+                          <h5 class="text-white">当前程序</h5>
+                          <label class="text-number">F3128-1016-4T</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center">
+                          <h5 class="text-white">节拍时间</h5>
+                          <label class="text-number">15</text>
+                          <label class="text-number-unit"> 秒</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center mt-3">
+                          <h5 class="text-white">生产进度</h5>
+                          <label class="text-number">2000 /16000</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center">
+                          <h5 class="text-white mt-3">已生产时间</h5>
+                          <label class="text-number">8</text>
+                          <label class="text-number-unit"> 小时</text>
+                          <label class="text-number">15</text>
+                          <label class="text-number-unit"> 分钟</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center"> 
+                          <h5 class="text-white mt-3">剩余时间</h5>
+                          <label class="text-number">1</text>
+                          <label class="text-number-unit"> 小时</text>
+                          <label class="text-number">20</text>
+                          <label class="text-number-unit"> 分钟</text>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- right staff panel -->
+              <div class="col-md-3">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card overlay-card h-100">
+                      <img src="/images/user.jpg" class="card-img-top" alt="user" style="height:160px">
+                      <div class="card-body py-2 text-center text-white">
+                        <h6>领班</h6>
+                        <h5 class="mb-1">张某某</h5>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="card overlay-card h-100">
+                      <img src="/images/user.jpg" class="card-img-top" alt="user" style="height:160px">
+                      <div class="card-body py-2 text-center text-white">
+                        <h6>技术员</h6>
+                        <h5 class="mb-1">陈某某</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- row 2 charts-->
+            <div class="row m-3">
+              <!-- WIP -->
+              <div class="col-md-12 p-0 vh-54">
+                <!-- top table-->
+                <table class="table table-sm table-striped table-borderless">
+                  <thead>
+                    <tr><th>投入站</th><th>SPI</th><th>贴片机</th><th>炉前AOI</th><th>炉后AOI</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>100</td><td>98</td><td>95</td><td>90</td><td>80</td></tr>
+                  </tbody>
+                </table>
+                <!-- bottom table-->
+                <table class="table table-sm table-striped table-borderless vh-44">
+                  <thead>
+                    <tr><th>时段</th><th>标准产出(PCS)</th><th>实际产出(PCS)</th><th>达成率(%)</th><th>稼动率(%)</th><th>抛料率(PPM)</th><th>SPI良率(%)</th><th>炉前AOI良率(%)</th><th>炉后AOI良率(%)</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><th>08:00</th><td>200</td><td>200</td><td>100</td><td>90</td><td>500</td><td>99</td><td>99</td><td>99</td></tr>
+                    <tr><th>09:00</th><td>200</td><td>200</td><td class="highlight">98</td><td>90</td><td>500</td><td>99</td><td>99</td><td>99</td></tr>
+                    <tr><th>10:00</th><td>200</td><td>200</td><td class="highlight">99</td><td>90</td><td>500</td><td>99</td><td>99</td><td>99</td></tr>
+                    <tr><th>11:00</th><td>200</td><td>200</td><td class="highlight">90</td><td>90</td><td>500</td><td>99</td><td>99</td><td>99</td></tr>
+                    <tr><th>12:00</th><td>200</td><td>200</td><td class="highlight">92</td><td>90</td><td>500</td><td>99</td><td>99</td><td>99</td></tr>
+                    <tr><th>13:00</th><td>200</td><td>200</td><td class="highlight">95</td><td>90</td><td>500</td><td>99</td><td>99</td><td>99</td></tr>
+                    <tr><th>14:00</th><td>200</td><td>200</td><td class="highlight">90</td><td>90</td><td>500</td><td>99</td><td>99</td><td>99</td></tr>
+                    <tr><th>15:00</th><td>200</td><td>200</td><td class="highlight">90</td><td>90</td><td>500</td><td>99</td><td>99</td><td>99</td></tr>
+                    <tr><th>16:00</th><td>200</td><td>200</td><td class="highlight">90</td><td>90</td><td>500</td><td>99</td><td>99</td><td>99</td></tr>
+                    <tr><th>17:00</th><td>200</td><td>200</td><td class="highlight">90</td><td>90</td><td>500</td><td>99</td><td>99</td><td>99</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- page 1-1 content -->
+        <div class="carousel-item">
+          <div class="container-fluid p-3 h-100 overlay-bg">
+
+            <!-- top heading -->
+            <div class="row m-3 justify-content-center align-self-center">
+              <div class="heading-warp">
+                <div class="heading-bg">
+                  <h2 class="heading mb-0">LINE 1 綜合生产看板</h2>
+                </div>
+              </div>
+            </div>
+          
+            <!-- row 1 -->
+            <div class="row m-3">
+          
+              <!-- left panel -->
+              <div class="col-md-9">
+                <div class="row h-100">
+                  <div class="col-md-12 overlay-panel p-3">
+                    <div class="row">    
+                      <div class="col-md-4">
+                        <div class="text-center">
+                          <h5 class="text-white">当前工单</h5>
+                          <label class="text-number">8111776706</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center">
+                          <h5 class="text-white">当前程序</h5>
+                          <label class="text-number">F3128-1016-4T</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center">
+                          <h5 class="text-white">节拍时间</h5>
+                          <label class="text-number">15</text>
+                          <label class="text-number-unit"> 秒</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center mt-3">
+                          <h5 class="text-white">生产进度</h5>
+                          <label class="text-number">2000 /16000</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center">
+                          <h5 class="text-white mt-3">已生产时间</h5>
+                          <label class="text-number">8</text>
+                          <label class="text-number-unit"> 小时</text>
+                          <label class="text-number">15</text>
+                          <label class="text-number-unit"> 分钟</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center"> 
+                          <h5 class="text-white mt-3">剩余时间</h5>
+                          <label class="text-number">1</text>
+                          <label class="text-number-unit"> 小时</text>
+                          <label class="text-number">20</text>
+                          <label class="text-number-unit"> 分钟</text>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- right staff panel -->
+              <div class="col-md-3">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card overlay-card">
+                      <img src="/images/user.jpg" class="card-img-top" alt="user" style="height:160px">
+                      <div class="card-body py-2 text-center text-white">
+                        <h6>领班</h6>
+                        <h5 class="mb-1">张某某</h5>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="col-md-6">
+                    <div class="card overlay-card">
+                      <img src="/images/user.jpg" class="card-img-top" alt="user" style="height:160px">
+                      <div class="card-body py-2 text-center text-white">
+                        <h6>技术员</h6>
+                        <h5 class="mb-1">陈某某</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          
+            <!-- row 2-->
+            <div class="row m-3">
+              <!-- left chart -->
+              <div class="col-md-6 pl-0 pr-1">
+                <div id="chart1-1" class="overlay-chart bar-chart vh-54"></div>
+              </div>
+          
+              <!-- right chart -->
+              <div class="col-md-6 pl-1 pr-0">
+                <div id="chart1-2" class="overlay-chart bar-chart vh-54"></div>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+
+        <!-- page 2 content -->
+        <div class="carousel-item">
+          <div class="container-fluid p-3 h-100 overlay-bg">
+
+            <!-- top heading -->
+            <div class="row m-3 justify-content-center align-self-center">
+              <div class="heading-warp">
+                <div class="heading-bg">
+                  <h2 class="heading mb-0">LINE 1 拋料看板</h2>
+                </div>
+              </div>
+            </div>
+          
+            <!-- row 1 -->
+            <div class="row m-3">
+          
+              <!-- left panel -->
+              <div class="col-md-9">
+                <div class="row h-100">
+                  <div class="col-md-12 overlay-panel p-3">
+                    <div class="row">    
+                      <div class="col-md-4">
+                        <div class="text-center">
+                          <h5 class="text-white">当前工单</h5>
+                          <label class="text-number">8111776706</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center">
+                          <h5 class="text-white">当前程序</h5>
+                          <label class="text-number">F3128-1016-4T</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center">
+                          <h5 class="text-white">节拍时间</h5>
+                          <label class="text-number">15</text>
+                          <label class="text-number-unit"> 秒</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center mt-3">
+                          <h5 class="text-white">生产进度</h5>
+                          <label class="text-number">2000 /16000</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center">
+                          <h5 class="text-white mt-3">已生产时间</h5>
+                          <label class="text-number">8</text>
+                          <label class="text-number-unit"> 小时</text>
+                          <label class="text-number">15</text>
+                          <label class="text-number-unit"> 分钟</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center"> 
+                          <h5 class="text-white mt-3">剩余时间</h5>
+                          <label class="text-number">1</text>
+                          <label class="text-number-unit"> 小时</text>
+                          <label class="text-number">20</text>
+                          <label class="text-number-unit"> 分钟</text>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- right staff panel -->
+              <div class="col-md-3">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card overlay-card">
+                      <img src="/images/user.jpg" class="card-img-top" alt="user" style="height:160px">
+                      <div class="card-body py-2 text-center text-white">
+                        <h6>领班</h6>
+                        <h5 class="mb-1">张某某</h5>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="col-md-6">
+                    <div class="card overlay-card">
+                      <img src="/images/user.jpg" class="card-img-top" alt="user" style="height:160px">
+                      <div class="card-body py-2 text-center text-white">
+                        <h6>技术员</h6>
+                        <h5 class="mb-1">陈某某</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <!-- row 2-->
+            <div class="row m-3">
+          
+              <!-- left chart -->
+              <div class="col-md-6 pl-0 pr-1">
+                <div id="chart2-1" class="overlay-chart bar-chart vh-54" _echarts_instance_="ec_1558668592565" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;"><div style="position: relative; overflow: hidden; width: 904px; height: 523px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="904" height="523" style="position: absolute; left: 0px; top: 0px; width: 904px; height: 523px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div></div></div>
+              </div>
+          
+              <!-- right chart -->
+              <div class="col-md-6 pl-1 pr-0">
+                <div id="chart2-2" class="overlay-chart bar-chart vh-54" _echarts_instance_="ec_1558668592566" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;"><div style="position: relative; overflow: hidden; width: 899px; height: 523px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="899" height="523" style="position: absolute; left: 0px; top: 0px; width: 899px; height: 523px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div></div></div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- page 3 content -->
+        <div class="carousel-item">
+          <div class="container-fluid p-3 h-100">
+
+            <!-- top heading -->
+            <div class="row m-3 justify-content-center align-self-center">
+              <div class="heading-warp">
+                <div class="heading-bg">
+                  <h2 class="heading mb-0">LINE 1 生產看板</h2>
+                </div>
+              </div>
+            </div>
+          
+            <!-- row 1 -->
+            <div class="row m-3">
+          
+              <!-- left panel -->
+              <div class="col-md-9">
+                <div class="row h-100">
+                  <div class="col-md-12 overlay-panel p-3">
+                    <div class="row">    
+                      <div class="col-md-4">
+                        <div class="text-center">
+                          <h5 class="text-white">当前工单</h5>
+                          <label class="text-number">8111776706</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center">
+                          <h5 class="text-white">当前程序</h5>
+                          <label class="text-number">F3128-1016-4T</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center">
+                          <h5 class="text-white">节拍时间</h5>
+                          <label class="text-number">15</text>
+                          <label class="text-number-unit"> 秒</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center mt-3">
+                          <h5 class="text-white">生产进度</h5>
+                          <label class="text-number">2000 /16000</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center">
+                          <h5 class="text-white mt-3">已生产时间</h5>
+                          <label class="text-number">8</text>
+                          <label class="text-number-unit"> 小时</text>
+                          <label class="text-number">15</text>
+                          <label class="text-number-unit"> 分钟</text>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-center"> 
+                          <h5 class="text-white mt-3">剩余时间</h5>
+                          <label class="text-number">1</text>
+                          <label class="text-number-unit"> 小时</text>
+                          <label class="text-number">20</text>
+                          <label class="text-number-unit"> 分钟</text>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- right staff panel -->
+              <div class="col-md-3">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card overlay-card">
+                      <img src="/images/user.jpg" class="card-img-top" alt="user" style="height:160px">
+                      <div class="card-body py-2 text-center text-white">
+                        <h6>领班</h6>
+                        <h5 class="mb-1">张某某</h5>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="col-md-6">
+                    <div class="card overlay-card">
+                      <img src="/images/user.jpg" class="card-img-top" alt="user" style="height:160px">
+                      <div class="card-body py-2 text-center text-white">
+                        <h6>技术员</h6>
+                        <h5 class="mb-1">陈某某</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <!-- row 2 charts -->  
+            <div class="row m-3">
+          
+              <!-- npm-1 -->  
+              <div class="col-md-3 pl-0 pr-1">
+                <div id="chart3-1" class="overlay-chart pie-chart vh-54"></div>
+              </div>
+              <!-- npm-2 -->
+              <div class="col-md-3 pl-0 pr-1">
+                <div id="chart3-2" class="overlay-chart pie-chart vh-54"></div>
+              </div>
+              <!-- npm-3 -->
+              <div class="col-md-3 pl-0 pr-1">
+                <div id="chart3-3" class="overlay-chart pie-chart vh-54"></div>
+              </div>
+              <!-- npm-4 -->
+              <div class="col-md-3 pl-0 pr-0">
+                <div id="chart3-4" class="overlay-chart pie-chart vh-54"></div>
+              </div>
+          
+            </div>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- bootstrap 4 js -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- echart.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.2.1/echarts.js"></script>
+  <script src="/javascripts/chalk.js"></script>
+  <script>
+    $(document).ready(function () {
+    var chart, option, textFontSize = 14, axisFontSize = 18, titleFontSize = 28, padding = 30;
+
+     /* chart1-1 */
+    if (document.getElementById('chart1-1')) {
+      chart = echarts.init(document.getElementById('chart1-1'), 'chalk');
+      option = {
+        title : {
+          text: '产能趋势',
+          subtext: '',
+          x:'center',
+          padding: padding,
+          textStyle :{
+            fontSize: titleFontSize
+          }
+        },
+        grid:{
+          y:80,
+          y2:100,
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                crossStyle: {
+                    color: '#999'
+                }
+            }
+        },
+        toolbox: {
+            feature: {
+                dataView: {show: true, readOnly: false},
+                magicType: {show: true, type: ['line', 'bar']},
+                restore: {show: true},
+                saveAsImage: {show: true}
+            }
+        },
+        legend: {
+            padding: padding,
+            textStyle :{
+              fontSize: axisFontSize,
+              color:'#ffffff'
+            },
+            bottom:"bottom",
+            data:['实际产出(PCS)','达成率(%)'],
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: ['08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00'],
+                axisPointer: {
+                    type: 'shadow'
+                },
+                axisLabel:{
+                  textStyle: {
+                      fontSize : axisFontSize
+                  }
+                },
+            }
+          ],
+          yAxis: [
+            {
+                type: 'value',
+                name: '',
+                min: 0,
+                max: 450,
+                interval: 50,
+                axisLabel: {
+                  formatter: '{value}',
+                  textStyle: {
+                      fontSize : axisFontSize
+                  },
+                }
+            },
+            {
+              type: 'value',
+              name: '',
+              min: 84,
+              max: 102,
+              interval: 2,
+              axisLabel: {
+                formatter: '{value}',
+                textStyle: {
+                    fontSize : axisFontSize
+                }
+              }
+            }
+          ],       
+          series: [
+          {
+            name:'实际产出(PCS)',
+            type:'bar',
+            barWidth: '50%',
+            data:[200, 380, 390, 90, 300, 90, 300, 90]
+          },
+          {
+            name:'达成率(%)',
+            type:'line',
+            lineStyle: {
+                normal: {
+                  width: 5,
+                  shadowColor: 'rgba(0,0,0,0.3)',
+                  shadowBlur: 5,
+                  shadowOffsetY: 5
+                }
+              },
+              data:[400, 350, 380, 150,200,280, 150, 150]
+            },
+          ]
+        };
+      chart.setOption(option);
+    }
+
+    /* chart1-2 */
+     if (document.getElementById('chart1-2')) {
+      chart = echarts.init(document.getElementById('chart1-2'), 'chalk');
+      option = {
+        title : {
+          text: '良率趋势',
+          subtext: '',
+          x:'center',
+          padding: padding,
+          textStyle :{
+            fontSize: titleFontSize
+          }
+        },
+        grid:{
+          y:80,
+          y2:100,
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                crossStyle: {
+                    color: '#999'
+                }
+            }
+        },
+        toolbox: {
+            feature: {
+                dataView: {show: true, readOnly: false},
+                magicType: {show: true, type: ['line', 'bar']},
+                restore: {show: true},
+                saveAsImage: {show: true}
+            }
+        },
+        legend: {
+            padding: padding,
+            textStyle :{
+              fontSize: axisFontSize,
+              color:'#ffffff'
+            },
+            bottom:"bottom",
+            data:['08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00'],
+        },
+        xAxis: [
+          {
+              type: 'category',
+              data: ['08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00'],
+              axisPointer: {
+                  type: 'shadow'
+              },
+              axisLabel:{
+                textStyle: {
+                    fontSize : axisFontSize
+                }
+              },
+            }
+          ],
+          yAxis: [
+            {
+                type: 'value',
+                name: '',
+                min: 84,
+                max: 100,
+                interval: 2,
+                axisLabel: {
+                  formatter: '{value}',
+                  textStyle: {
+                      fontSize : axisFontSize
+                  },
+                }
+            },
+          ],       
+          series: [
+          {
+            name:'良率趋势',
+            type:'bar',
+            barWidth: '50%',
+            itemStyle: {
+                normal: {
+                    color: function(params) {
+                        // build a color map as your need.
+                        var colorList = [
+                          "#00ccd9","#fa672f","#afde48","#c164f7","#1c6ee6",
+                          "#f9bb48","#bebebe","#eb0d0d",
+                        ];
+                        return colorList[params.dataIndex]
+                    },
+                }
+              },
+              data: [99,90,99,90,95,93,98,99],
+              markPoint: {
+                  tooltip: {
+                      trigger: 'item',
+                      backgroundColor: 'rgba(0,0,0,0)',
+
+                  },
+              }
+            },
+          ]
+        };
+      chart.setOption(option);
+    }
+
+    /* chart2-1 */
+    if (document.getElementById('chart2-1')) {
+      chart = echarts.init(document.getElementById('chart2-1'), 'chalk');
+      option = {
+        title : {
+          text: '按料站',
+          subtext: '',
+          x:'center',
+          padding: padding,
+          textStyle :{
+            fontSize: titleFontSize
+          }
+        },
+        grid:{
+          y:80,
+          y2:100,
+        },
+          tooltip: {
+              trigger: 'axis',
+              axisPointer: {
+                  type: 'cross',
+                  crossStyle: {
+                      color: '#999'
+                  }
+              }
+          },
+          toolbox: {
+              feature: {
+                  dataView: {show: true, readOnly: false},
+                  magicType: {show: true, type: ['line', 'bar']},
+                  restore: {show: true},
+                  saveAsImage: {show: true}
+              }
+          },
+          legend: {
+            padding: padding,
+            textStyle :{
+              fontSize: axisFontSize,
+              color:'#ffffff'
+            },
+            data:['抛料率','抛料率(PPM)'],
+            bottom:'bottom'
+          },
+          xAxis: [
+              {
+                  type: 'category',
+                  data: ['1L','2L','3L','4L','5L','6L','7L','8L'],
+                  axisPointer: {
+                      type: 'shadow'
+                  },
+                  axisLabel:{
+                    margin: 15,
+                    textStyle: {
+                        fontSize : axisFontSize
+                    }
+                  },
+              }
+          ],
+          yAxis: [
+              {
+                  type: 'value',
+                  name: '',
+                  min: 0.000,
+                  max: 0.006,
+                  interval: 0.001,
+                  axisLabel: {
+                    formatter: '{value}',
+                    margin: 15,
+                    textStyle: {
+                        fontSize : axisFontSize
+                    }
+                  }
+              },
+              {
+                  type: 'value',
+                  name: '',
+                  min: 0,
+                  max: 6000,
+                  interval: 1000,
+                  axisLabel: {
+                    formatter: '{value}',
+                    margin: 15,
+                    textStyle: {
+                        fontSize : axisFontSize
+                    }
+                  }
+              }
+          ],       
+          series: [
+          {
+              name:'抛料率',
+              type:'bar',
+              barWidth: '50%',
+              data:[0.005, 0.004, 0.004, 0.004, 0.004, 0.005, 0.005, 0.003]
+          },
+          {
+              name:'抛料率(PPM)',
+              type:'line',
+              lineStyle: {
+                  normal: {
+                    width: 5,
+                    shadowColor: 'rgba(0,0,0,0.3)',
+                    shadowBlur: 5,
+                    shadowOffsetY: 5
+                  }
+              },
+              data:[0.005, 0.004, 0.004, 0.004, 0.004, 0.005, 0.005, 0.003]
+          },
+          ]
+        };
+      chart.setOption(option);
+    }
+
+    /* chart2-2 */
+    if (document.getElementById('chart2-2')) {
+      chart = echarts.init(document.getElementById('chart2-2'), 'chalk');
+      option = {
+        title : {
+          text: '按吸嘴',
+          subtext: '',
+          x:'center',
+          padding: padding,
+          textStyle :{
+            fontSize: titleFontSize
+          }
+        },
+        grid:{
+          y:80,
+          y2:100,
+        },
+          tooltip: {
+              trigger: 'axis',
+              axisPointer: {
+                  type: 'cross',
+                  crossStyle: {
+                      color: '#999'
+                  }
+              }
+          },
+          toolbox: {
+              feature: {
+                  dataView: {show: true, readOnly: false},
+                  magicType: {show: true, type: ['line', 'bar']},
+                  restore: {show: true},
+                  saveAsImage: {show: true}
+              }
+          },
+          legend: {
+            padding: padding,
+            textStyle :{
+              fontSize: axisFontSize,
+              color:'#ffffff'
+            },
+            data:['吸嘴','抛料率','抛料率(PPM)'],
+            bottom:'bottom'
+          },
+          xAxis: [
+              {
+                  type: 'category',
+                  data: ['1','2','3','4','5','6','7','8'],
+                  axisPointer: {
+                      type: 'shadow'
+                  },
+                  axisLabel:{
+                    margin: 15,
+                    textStyle: {
+                        fontSize : axisFontSize
+                    }
+                  },
+              }
+          ],
+          yAxis: [
+              {
+                  type: 'value',
+                  name: '',
+                  min: 0,
+                  max: 6000,
+                  interval: 1000,
+                  axisLabel: {
+                    formatter: '{value}',
+                    margin: 15,
+                    textStyle: {
+                        fontSize : axisFontSize
+                    }
+                  }
+              },
+              {
+                  type: 'value',
+                  name: '',
+                  min: 0.000,
+                  max: 0.006,
+                  interval: 0.001,
+                  axisLabel: {
+                    formatter: '{value}',
+                    margin: 15,
+                    textStyle: {
+                        fontSize : axisFontSize
+                    }
+                  }
+              },
+          ],       
+          series: [
+          {
+            name:'吸嘴',
+            type:'bar',
+            barWidth: '0%',
+          },
+          {
+            name:'抛料率',
+            type:'bar',
+            barWidth: '50%',
+            data:[5000, 4545, 4167, 3846, 4167, 5000, 4545, 3571]
+          },
+          {
+            name:'抛料率(PPM)',
+            type:'line',
+            lineStyle: {
+                normal: {
+                  width: 5,
+                  shadowColor: 'rgba(0,0,0,0.3)',
+                  shadowBlur: 5,
+                  shadowOffsetY: 5
+                }
+            },
+            data:[5000, 4545, 4167, 3846, 4167, 5000, 4545, 3571]
+          },
+          ]
+        };
+      chart.setOption(option);
+    }
+
+    /* chart3-1 */
+    option = {
+        title : {
+            text: 'NPM-1',
+            subtext: '',
+            x:'center',
+            padding: padding,
+            textStyle :{
+              fontSize: titleFontSize
+            }
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'horizontal',
+            bottom: 'left',
+            data: ['工作时间','前等待时间','后等待时间','待料时间','恢复时间','其它异常时间'],
+            padding: padding
+        },
+        textStyle: {
+            fontSize : textFontSize
+        },
+        series : [
+            {
+              name: '访问来源',
+              type: 'pie',
+              radius : '55%',
+              center: ['52%', '50%'],
+              data:[
+                  {value:65, name:'工作时间'},
+                  {value:10, name:'前等待时间'},
+                  {value:8, name:'后等待时间'},
+                  {value:8, name:'待料时间'},
+                  {value:7, name:'恢复时间'},
+                  {value:2, name:'其它异常时间'},
+              ],
+              itemStyle: {
+                  emphasis: {
+                      shadowBlur: 10,
+                      shadowOffsetX: 0,
+                      shadowColor: 'rgba(0, 0, 0, 0.5)'
+                  }
+              }
+            }
+        ]
+    };
+    if (document.getElementById('chart3-1')) {
+      chart = echarts.init(document.getElementById('chart3-1'), 'chalk');
+      chart.setOption(option);
+    }
+
+      /* chart3-2 */
+    if (document.getElementById('chart3-2')) {
+      chart = echarts.init(document.getElementById('chart3-2'), 'chalk');
+      option.title.text = "NPM-2";
+      chart.setOption(option);
+    }
+
+      /* chart3-3 */
+    if (document.getElementById('chart3-3')) {
+      chart = echarts.init(document.getElementById('chart3-3'), 'chalk');
+      option.title.text = "NPM-3";
+      chart.setOption(option);
+    }
+
+      /* chart3-4 */
+    if (document.getElementById('chart3-4')) {
+      chart = echarts.init(document.getElementById('chart3-4'), 'chalk');
+      option.title.text = "NPM-4";
+      chart.setOption(option);
+    }
+    });
+  </script>
+
+
+</body></html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8">
+    <meta name='viewport'  content='width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'>
+    <meta http-equiv='X-UA-Compatible'  content='IE=edge,chrome=1'>
+    <title>{{title}}</title>
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600&display=swap" rel="stylesheet">
+    <!-- Custom css -->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    {{{body}}}
+    <!-- bootstrap 4 js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- echart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.2.1/echarts.js"></script>
+    <script src="/javascripts/chalk.js"></script>
+    <script>
+      /* chart1-1 */
+      var chart, option, textFontSize = 14, axisFontSize = 18, titleFontSize = 28, padding = 30;
+      if (document.getElementById('chart1-1')) {
+        chart = echarts.init(document.getElementById('chart1-1'), 'chalk');
+        option = {
+          title : {
+            text: '产能趋势',
+            subtext: '',
+            x:'center',
+            padding: padding,
+            textStyle :{
+              fontSize: titleFontSize
+            }
+          },
+          grid:{
+            y:80,
+            y2:100,
+          },
+          tooltip: {
+              trigger: 'axis',
+              axisPointer: {
+                  type: 'cross',
+                  crossStyle: {
+                      color: '#999'
+                  }
+              }
+          },
+          toolbox: {
+              feature: {
+                  dataView: {show: true, readOnly: false},
+                  magicType: {show: true, type: ['line', 'bar']},
+                  restore: {show: true},
+                  saveAsImage: {show: true}
+              }
+          },
+          legend: {
+              padding: padding,
+              textStyle :{
+                fontSize: axisFontSize,
+                color:'#ffffff'
+              },
+              bottom:"bottom",
+              data:['实际产出(PCS)','达成率(%)'],
+          },
+          xAxis: [
+              {
+                  type: 'category',
+                  data: ['08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00'],
+                  axisPointer: {
+                      type: 'shadow'
+                  },
+                  axisLabel:{
+                    textStyle: {
+                        fontSize : axisFontSize
+                    }
+                  },
+              }
+            ],
+            yAxis: [
+              {
+                  type: 'value',
+                  name: '',
+                  min: 0,
+                  max: 450,
+                  interval: 50,
+                  axisLabel: {
+                    formatter: '{value}',
+                    textStyle: {
+                        fontSize : axisFontSize
+                    },
+                  }
+              },
+              {
+                type: 'value',
+                name: '',
+                min: 84,
+                max: 102,
+                interval: 2,
+                axisLabel: {
+                  formatter: '{value}',
+                  textStyle: {
+                      fontSize : axisFontSize
+                  }
+                }
+              }
+            ],       
+            series: [
+            {
+              name:'实际产出(PCS)',
+              type:'bar',
+              barWidth: '50%',
+              data:[200, 380, 390, 90, 300, 90, 300, 90]
+            },
+            {
+              name:'达成率(%)',
+              type:'line',
+              lineStyle: {
+                  normal: {
+                    width: 5,
+                    shadowColor: 'rgba(0,0,0,0.3)',
+                    shadowBlur: 5,
+                    shadowOffsetY: 5
+                  }
+                },
+                data:[400, 350, 380, 150,200,280, 150, 150]
+              },
+            ]
+          };
+        chart.setOption(option);
+      }
+
+      /* chart1-2 */
+      if (document.getElementById('chart1-2')) {
+        chart = echarts.init(document.getElementById('chart1-2'), 'chalk');
+        option = {
+          title : {
+            text: '良率趋势',
+            subtext: '',
+            x:'center',
+            padding: padding,
+            textStyle :{
+              fontSize: titleFontSize
+            }
+          },
+          grid:{
+            y:80,
+            y2:100,
+          },
+          tooltip: {
+              trigger: 'axis',
+              axisPointer: {
+                  type: 'cross',
+                  crossStyle: {
+                      color: '#999'
+                  }
+              }
+          },
+          toolbox: {
+              feature: {
+                  dataView: {show: true, readOnly: false},
+                  magicType: {show: true, type: ['line', 'bar']},
+                  restore: {show: true},
+                  saveAsImage: {show: true}
+              }
+          },
+          legend: {
+              padding: padding,
+              textStyle :{
+                fontSize: axisFontSize,
+                color:'#ffffff'
+              },
+              bottom:"bottom",
+              data:['08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00'],
+          },
+          xAxis: [
+            {
+                type: 'category',
+                data: ['08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00'],
+                axisPointer: {
+                    type: 'shadow'
+                },
+                axisLabel:{
+                  textStyle: {
+                      fontSize : axisFontSize
+                  }
+                },
+              }
+            ],
+            yAxis: [
+              {
+                  type: 'value',
+                  name: '',
+                  min: 84,
+                  max: 100,
+                  interval: 2,
+                  axisLabel: {
+                    formatter: '{value}',
+                    textStyle: {
+                        fontSize : axisFontSize
+                    },
+                  }
+              },
+            ],       
+            series: [
+            {
+              name:'良率趋势',
+              type:'bar',
+              barWidth: '50%',
+              itemStyle: {
+                  normal: {
+                      color: function(params) {
+                          // build a color map as your need.
+                          var colorList = [
+                            "#00ccd9","#fa672f","#afde48","#c164f7","#1c6ee6",
+                            "#f9bb48","#bebebe","#eb0d0d",
+                          ];
+                          return colorList[params.dataIndex]
+                      },
+                  }
+                },
+                data: [99,90,99,90,95,93,98,99],
+                markPoint: {
+                    tooltip: {
+                        trigger: 'item',
+                        backgroundColor: 'rgba(0,0,0,0)',
+
+                    },
+                }
+              },
+            ]
+          };
+        chart.setOption(option);
+      }
+
+      /* chart2-1 */
+      if (document.getElementById('chart2-1')) {
+        chart = echarts.init(document.getElementById('chart2-1'), 'chalk');
+        option = {
+          title : {
+            text: '按料站',
+            subtext: '',
+            x:'center',
+            padding: padding,
+            textStyle :{
+              fontSize: titleFontSize
+            }
+          },
+          grid:{
+            y:80,
+            y2:100,
+          },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    crossStyle: {
+                        color: '#999'
+                    }
+                }
+            },
+            toolbox: {
+                feature: {
+                    dataView: {show: true, readOnly: false},
+                    magicType: {show: true, type: ['line', 'bar']},
+                    restore: {show: true},
+                    saveAsImage: {show: true}
+                }
+            },
+            legend: {
+              padding: padding,
+              textStyle :{
+                fontSize: axisFontSize,
+                color:'#ffffff'
+              },
+              data:['抛料率','抛料率(PPM)'],
+              bottom:'bottom'
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['1L','2L','3L','4L','5L','6L','7L','8L'],
+                    axisPointer: {
+                        type: 'shadow'
+                    },
+                    axisLabel:{
+                      margin: 15,
+                      textStyle: {
+                          fontSize : axisFontSize
+                      }
+                    },
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: '',
+                    min: 0.000,
+                    max: 0.006,
+                    interval: 0.001,
+                    axisLabel: {
+                      formatter: '{value}',
+                      margin: 15,
+                      textStyle: {
+                          fontSize : axisFontSize
+                      }
+                    }
+                },
+                {
+                    type: 'value',
+                    name: '',
+                    min: 0,
+                    max: 6000,
+                    interval: 1000,
+                    axisLabel: {
+                      formatter: '{value}',
+                      margin: 15,
+                      textStyle: {
+                          fontSize : axisFontSize
+                      }
+                    }
+                }
+            ],       
+            series: [
+            {
+                name:'抛料率',
+                type:'bar',
+                barWidth: '50%',
+                data:[0.005, 0.004, 0.004, 0.004, 0.004, 0.005, 0.005, 0.003]
+            },
+            {
+                name:'抛料率(PPM)',
+                type:'line',
+                lineStyle: {
+                    normal: {
+                      width: 5,
+                      shadowColor: 'rgba(0,0,0,0.3)',
+                      shadowBlur: 5,
+                      shadowOffsetY: 5
+                    }
+                },
+                data:[0.005, 0.004, 0.004, 0.004, 0.004, 0.005, 0.005, 0.003]
+            },
+            ]
+          };
+        chart.setOption(option);
+      }
+
+      /* chart2-2 */
+      if (document.getElementById('chart2-2')) {
+        chart = echarts.init(document.getElementById('chart2-2'), 'chalk');
+        option = {
+          title : {
+            text: '按吸嘴',
+            subtext: '',
+            x:'center',
+            padding: padding,
+            textStyle :{
+              fontSize: titleFontSize
+            }
+          },
+          grid:{
+            y:80,
+            y2:100,
+          },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    crossStyle: {
+                        color: '#999'
+                    }
+                }
+            },
+            toolbox: {
+                feature: {
+                    dataView: {show: true, readOnly: false},
+                    magicType: {show: true, type: ['line', 'bar']},
+                    restore: {show: true},
+                    saveAsImage: {show: true}
+                }
+            },
+            legend: {
+              padding: padding,
+              textStyle :{
+                fontSize: axisFontSize,
+                color:'#ffffff'
+              },
+              data:['吸嘴','抛料率','抛料率(PPM)'],
+              bottom:'bottom'
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['1','2','3','4','5','6','7','8'],
+                    axisPointer: {
+                        type: 'shadow'
+                    },
+                    axisLabel:{
+                      margin: 15,
+                      textStyle: {
+                          fontSize : axisFontSize
+                      }
+                    },
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: '',
+                    min: 0,
+                    max: 6000,
+                    interval: 1000,
+                    axisLabel: {
+                      formatter: '{value}',
+                      margin: 15,
+                      textStyle: {
+                          fontSize : axisFontSize
+                      }
+                    }
+                },
+                {
+                    type: 'value',
+                    name: '',
+                    min: 0.000,
+                    max: 0.006,
+                    interval: 0.001,
+                    axisLabel: {
+                      formatter: '{value}',
+                      margin: 15,
+                      textStyle: {
+                          fontSize : axisFontSize
+                      }
+                    }
+                },
+            ],       
+            series: [
+            {
+              name:'吸嘴',
+              type:'bar',
+              barWidth: '0%',
+            },
+            {
+              name:'抛料率',
+              type:'bar',
+              barWidth: '50%',
+              data:[5000, 4545, 4167, 3846, 4167, 5000, 4545, 3571]
+            },
+            {
+              name:'抛料率(PPM)',
+              type:'line',
+              lineStyle: {
+                  normal: {
+                    width: 5,
+                    shadowColor: 'rgba(0,0,0,0.3)',
+                    shadowBlur: 5,
+                    shadowOffsetY: 5
+                  }
+              },
+              data:[5000, 4545, 4167, 3846, 4167, 5000, 4545, 3571]
+            },
+            ]
+          };
+        chart.setOption(option);
+      }
+
+      /* chart3-1 */
+      option = {
+          title : {
+              text: 'NPM-1',
+              subtext: '',
+              x:'center',
+              padding: padding,
+              textStyle :{
+                fontSize: titleFontSize
+              }
+          },
+          tooltip : {
+              trigger: 'item',
+              formatter: "{a} <br/>{b} : {c} ({d}%)"
+          },
+          legend: {
+              orient: 'horizontal',
+              bottom: 'left',
+              data: ['工作时间','前等待时间','后等待时间','待料时间','恢复时间','其它异常时间'],
+              padding: padding
+          },
+          textStyle: {
+              fontSize : textFontSize
+          },
+          series : [
+              {
+                name: '访问来源',
+                type: 'pie',
+                radius : '55%',
+                center: ['52%', '50%'],
+                data:[
+                    {value:65, name:'工作时间'},
+                    {value:10, name:'前等待时间'},
+                    {value:8, name:'后等待时间'},
+                    {value:8, name:'待料时间'},
+                    {value:7, name:'恢复时间'},
+                    {value:2, name:'其它异常时间'},
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+              }
+          ]
+      };
+      if (document.getElementById('chart3-1')) {
+        chart = echarts.init(document.getElementById('chart3-1'), 'chalk');
+        chart.setOption(option);
+      }
+
+        /* chart3-2 */
+      if (document.getElementById('chart3-2')) {
+        chart = echarts.init(document.getElementById('chart3-2'), 'chalk');
+        option.title.text = "NPM-2";
+        chart.setOption(option);
+      }
+
+        /* chart3-3 */
+      if (document.getElementById('chart3-3')) {
+        chart = echarts.init(document.getElementById('chart3-3'), 'chalk');
+        option.title.text = "NPM-3";
+        chart.setOption(option);
+      }
+
+        /* chart3-4 */
+      if (document.getElementById('chart3-4')) {
+        chart = echarts.init(document.getElementById('chart3-4'), 'chalk');
+        option.title.text = "NPM-4";
+        chart.setOption(option);
+      }
+
+    </script>
+  </body>
+</html>
